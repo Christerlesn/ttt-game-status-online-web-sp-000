@@ -59,3 +59,12 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  if won?(board) == "X"
+    puts "X won"
+  elsif won?(board) == "O"
+    puts "O won"
+  else
+  end
+end
