@@ -33,3 +33,29 @@ WIN_COMBINATIONS.each do |single_win_combo|
 end
 return false
 end
+
+def full?(board)
+  if board.any? {|index| index == " " || index == nil}
+    return false
+  else
+    return true
+  end
+end
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    return true
+  elsif won?(board) && full?(board)
+    return false
+  else won?(board)
+    return false
+  end
+end
+
+def over?(board)
+  if won?(board) || draw?(board) || full?(board)
+    return true
+  else 
+    return false
+  end
+end
