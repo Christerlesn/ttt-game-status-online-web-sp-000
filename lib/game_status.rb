@@ -66,4 +66,3 @@ def winner(board)
   end
 else
 end
-
